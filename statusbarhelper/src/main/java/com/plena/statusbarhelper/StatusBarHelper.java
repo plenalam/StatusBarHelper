@@ -16,17 +16,23 @@ import java.lang.reflect.Method;
  * Describe：
  */
 public class StatusBarHelper {
+
+    private Activity activity;
+
+    public StatusBarHelper(Activity pActivity) {
+        activity = pActivity;
+    }
+
     /**
      * 设置沉浸式标题栏
-     *
-     * @param activity
      */
     @TargetApi(19)
-    public static void setSystemStatusBar(Activity activity) {
+    public StatusBarHelper setSystemStatusBar() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             activity.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
         }
+        return this;
     }
 
     /**
@@ -35,20 +41,23 @@ public class StatusBarHelper {
      * @param dialog
      */
     @TargetApi(19)
-    public static void setSystemStatusBar(Dialog dialog) {
+    public static void setSystemStatusBarDialog(Dialog dialog) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
     }
 
     /**
-     * @param activity
+     * 设置透明虚拟键盘
+     *
+     * @return
      */
     @TargetApi(19)
-    public static void setSystemNavigationBar(Activity activity) {
+    public StatusBarHelper setSystemNavigationBar() {
         if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) && isHasNav()) {
             activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
+        return this;
     }
 
     /**
