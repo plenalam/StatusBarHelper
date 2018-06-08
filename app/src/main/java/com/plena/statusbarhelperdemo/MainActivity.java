@@ -11,7 +11,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        StatusBarHelper statusBarHelper = new StatusBarHelper(this);
-        statusBarHelper.setSystemStatusBar();
+        new StatusBarHelper(this).setSystemStatusBar()
+        .setStatusBarLightMode(true)
+        .setWindowFullScreen(true);
     }
 }
