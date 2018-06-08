@@ -64,6 +64,7 @@ public class StatusBarHelper {
         return this;
     }
 
+
     /**
      * 为根布局设置FitsSystemWindows属性
      *
@@ -93,7 +94,7 @@ public class StatusBarHelper {
 
 
     /**
-     * 设置沉浸式DIalog
+     * 设置沉浸式Dialog
      *
      * @param dialog
      */
