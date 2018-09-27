@@ -20,3 +20,16 @@ dependencies {
 	}
 ```
 
+
+```xml
+<com.plena.statusbarhelper.StatusBarRelativeLayout
+	android:id="@+id/rl_title"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/bg_title"
+	android:gravity="center">
+		<TextView
+                style="@style/TitleTextViewStyle"
+                android:text="登录" />
+</com.plena.statusbarhelper.StatusBarRelativeLayout>
+```
