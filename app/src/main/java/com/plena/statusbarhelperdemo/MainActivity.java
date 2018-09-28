@@ -13,6 +13,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         new StatusBarHelper(this).setSystemStatusBar()
         .setStatusBarLightMode(true)
-        .setWindowFullScreen(true);
+        .setWindowFullScreen(false);
     }
 }
