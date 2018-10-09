@@ -2,7 +2,8 @@
 [![](https://jitpack.io/v/plenalam/StatusBarHelper.svg)](https://jitpack.io/#plenalam/StatusBarHelper)
 
 ## Introduction
-Easy to set Android Statusbar.
+Easy to set Android Statusbar.  
+[中文](https://github.com/plenalam/StatusBarHelper/blob/master/README_ZH.md)
 
 ## Useage
 Add it in your root build.gradle at the end of repositories:
